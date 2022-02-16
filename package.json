@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/assert-is-leap-year",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Test if a value corresponds to a leap year in the Gregorian calendar.",
   "license": "Apache-2.0",
   "author": {

@@ -1,0 +1,47 @@
+{
+  "name": "@stdlib/assert-is-leap-year",
+  "version": "0.0.0",
+  "description": "Test if a value corresponds to a leap year in the Gregorian calendar.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/assert-is-leap-year.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdassert",
+    "assertion",
+    "assert",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "date",
+    "year",
+    "yr",
+    "leap",
+    "leap-year",
+    "gregorian",
+    "calendar",
+    "time",
+    "is",
+    "isleap",
+    "isleapyear",
+    "type",
+    "check",
+    "valid",
+    "validate",
+    "test",
+    "isvalid"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}

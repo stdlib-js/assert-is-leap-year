@@ -26,32 +26,30 @@ limitations under the License.
 
 A [leap year][leap-year] is defined as any year which is exactly divisible by `4`, except for years which are exactly divisible by `100` and not by `400`. In this definition, `100` corresponds to years marking a new century, and `400` corresponds to the length of the _leap cycle_.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-leap-year
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-isLeapYear = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.isLeapYear;
-})();
-</script>
+var isLeapYear = require( '@stdlib/assert-is-leap-year' );
 ```
 
 #### isLeapYear( \[value] )
@@ -102,13 +100,8 @@ bool = isLeapYear( 2017 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var isLeapYear = require( '@stdlib/assert-is-leap-year' );
 
 var bool;
 var i;
@@ -117,18 +110,75 @@ for ( i = 0; i < 2021; i++ ) {
     bool = isLeapYear( i );
     console.log( 'The year %d %s a leap year.', i, ( bool ) ? 'is' : 'is not' );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use the module as a general utility, install the module globally
+
+```bash
+npm install -g @stdlib/assert-is-leap-year
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: is-leap-year [options] [<year>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ is-leap-year
+<boolean>
+
+$ is-leap-year 1993
+false
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 1992 | is-leap-year
+true
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -203,6 +253,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/assert-is-leap-year/tree/deno
 [umd-url]: https://github.com/stdlib-js/assert-is-leap-year/tree/umd
 [esm-url]: https://github.com/stdlib-js/assert-is-leap-year/tree/esm
+[branches-url]: https://github.com/stdlib-js/assert-is-leap-year/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-leap-year/main/LICENSE
 

@@ -37,19 +37,102 @@ limitations under the License.
 
 A [leap year][leap-year] is defined as any year which is exactly divisible by `4`, except for years which are exactly divisible by `100` and not by `400`. In this definition, `100` corresponds to years marking a new century, and `400` corresponds to the length of the _leap cycle_.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/assert-is-leap-year
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+</section>
 
+<section class="usage">
 
+## Usage
 
+```javascript
+var isLeapYear = require( '@stdlib/assert-is-leap-year' );
+```
+
+#### isLeapYear( \[value] )
+
+Tests if a `value` corresponds to a [leap year][leap-year] in the [Gregorian calendar][gregorian-calendar].
+
+```javascript
+var bool = isLeapYear();
+// returns <boolean>
+
+bool = isLeapYear( new Date() );
+// returns <boolean>
+
+bool = isLeapYear( 2000 );
+// returns true
+
+bool = isLeapYear( 2017 );
+// returns false
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   If not provided any `arguments`, the function returns a `boolean` indicating if the current year (according to local time) is a [leap year][leap-year].
+
+-   If provided a `value` which is neither an integer value nor a [`Date`][date-object], the function **always** returns `false`.
+
+    ```javascript
+    var bool = isLeapYear( '2016' );
+    // returns false
+
+    bool = isLeapYear( null );
+    // returns false
+    ```
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var isLeapYear = require( '@stdlib/assert-is-leap-year' );
+
+var bool;
+var i;
+
+for ( i = 0; i < 2021; i++ ) {
+    bool = isLeapYear( i );
+    console.log( 'The year %d %s a leap year.', i, ( bool ) ? 'is' : 'is not' );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -67,7 +150,7 @@ npm install -g @stdlib/assert-is-leap-year-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: is-leap-year [options] [<year>]
@@ -87,7 +170,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -106,7 +189,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ is-leap-year
@@ -143,11 +226,6 @@ false
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/assert-is-leap-year`][@stdlib/assert-is-leap-year]</span><span class="delimiter">: </span><span class="description">test if a value corresponds to a leap year in the Gregorian calendar.</span>
-
-
 </section>
 
 <!-- /.related -->
@@ -165,7 +243,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -188,8 +266,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-leap-year-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/assert-is-leap-year-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-leap-year.svg
+[npm-url]: https://npmjs.org/package/@stdlib/assert-is-leap-year
 
 [test-image]: https://github.com/stdlib-js/assert-is-leap-year/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/assert-is-leap-year/actions/workflows/test.yml?query=branch:main

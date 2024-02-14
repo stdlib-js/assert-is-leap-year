@@ -44,7 +44,7 @@ A [leap year][leap-year] is defined as any year which is exactly divisible by `4
 ## Usage
 
 ```javascript
-import isLeapYear from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@deno/mod.js';
+import isLeapYear from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@v0.2.0-deno/mod.js';
 ```
 
 #### isLeapYear( \[value] )
@@ -96,7 +96,7 @@ bool = isLeapYear( 2017 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isLeapYear from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@deno/mod.js';
+import isLeapYear from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-leap-year@v0.2.0-deno/mod.js';
 
 var bool;
 var i;
